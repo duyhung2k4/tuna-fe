@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import { Drawer, Group, Image, LoadingOverlay, Stack } from "@mantine/core";
 import { useOutlet } from "react-router";
@@ -28,6 +28,10 @@ const UserLayout: React.FC = () => {
     ROUTER.ABOUT,
     ROUTER.CONTACT,
   ]
+
+  useEffect(() => {
+    setMobileLink(false);
+  }, [window.location.pathname]);
 
 
 

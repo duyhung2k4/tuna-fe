@@ -37,13 +37,12 @@
 }
 
 .nav_link_mobile_group {
-  height: 0px;
   overflow: hidden;
   transition: 200ms;
 }
 
 .nav_link_mobile_group_active {
-  height: auto;
+  height: auto !important;
   transition: 200ms;
 }
 
