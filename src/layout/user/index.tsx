@@ -1,4 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
+import Footer from "./footer";
+import NavLinkMobile from "./link_mobile";
 
 import { Drawer, Group, Image, LoadingOverlay, Stack } from "@mantine/core";
 import { useOutlet } from "react-router";
@@ -9,7 +11,6 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import logo from "@/assets/icons/Logo_ Tuna Studio  png-01.png";
 import classes from "./styles.module.css";
-import NavLinkMobile from "./link_mobile";
 
 
 
@@ -59,8 +60,12 @@ const UserLayout: React.FC = () => {
               />
           }
         </Group>
+
         <Stack className={classes.content}>
-          {outlet}
+          <Stack className={classes.outlet}>
+            {outlet}
+          </Stack>
+          <Footer />
         </Stack>
       </Stack>
 
