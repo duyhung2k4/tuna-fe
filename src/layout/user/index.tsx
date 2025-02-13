@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 
-import { Drawer, Group, Image, LoadingOverlay, Stack, Text } from "@mantine/core";
+import { Drawer, Group, Image, LoadingOverlay, Stack } from "@mantine/core";
 import { useOutlet } from "react-router";
 import { ObjectRouter, ROUTER } from "@/constants/router";
 import { NavLink } from "./link";
@@ -74,12 +74,11 @@ const UserLayout: React.FC = () => {
             color: "#000",
           }
         }}
-        // opened={(matchScreen && mobileLink) || false}
-        opened
+        opened={(matchScreen && mobileLink) || false}
         onClose={() => setMobileLink(false)}
       >
         <Stack
-          
+
         >
           {
             links.map((item, i) => <NavLinkMobile key={i} info={item} />)
