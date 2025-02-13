@@ -1,0 +1,31 @@
+.box {
+  border-radius: 8px;
+  color: #FFF !important;
+  background-color: #000;
+  justify-content: end;
+  align-items: center;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 500ms;
+}
+
+.box:hover {
+  background-size: 110%;
+  transition: 500ms;
+}
+
+.name {
+  color: #FFF;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.info {
+  width: 100%;
+  padding: 40px 32px 40px 32px;
+  align-items: center;
+  border-radius: 8px;
+  background: linear-gradient(0deg,#0e453d,rgba(14,69,61,0));
+}

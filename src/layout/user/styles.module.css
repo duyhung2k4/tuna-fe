@@ -1,0 +1,52 @@
+.header_navbar {
+  background-color: #0C5552;
+  color: #FFF;
+  padding: 0px 5vw;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.content {
+  padding: 24px 10vw;
+  padding-top: 0px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav_link {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6);
+}
+
+.nav_link_mobile {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  color: #FFF !important;
+}
+
+.nav_link_mobile_child {
+  cursor: pointer;
+  color: #e0e0e0 !important;
+}
+
+.nav_link_mobile_group {
+  height: 0px;
+  overflow: hidden;
+  transition: 200ms;
+}
+
+.nav_link_mobile_group_active {
+  height: auto;
+  transition: 200ms;
+}
+
+.nav_link_active {
+  border-bottom: 2px solid #4580d2;
+}

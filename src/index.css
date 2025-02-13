@@ -1,0 +1,40 @@
+#root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* font-family: "Roboto", serif; */
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000;
+  background-color: #FFFFFF;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh !important;
+  width: 100vw !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh !important;
+  width: 100vw !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
