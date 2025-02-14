@@ -19,6 +19,7 @@ const UserLayout: React.FC = () => {
   const [mobileLink, setMobileLink] = useState<boolean>(false);
 
   const matchScreen = useMediaQuery("(max-width: 1100px)");
+  const matchMobile = useMediaQuery("(max-width: 756px)");
 
   const links: ObjectRouter[] = [
     ROUTER.HOME,
@@ -62,7 +63,12 @@ const UserLayout: React.FC = () => {
         </Group>
 
         <Stack className={classes.content}>
-          <Stack className={classes.outlet}>
+          <Stack 
+            className={classes.outlet}
+            style={{
+              padding: `24px ${matchMobile ? 2 : 10}vw`,
+            }}
+          >
             {outlet}
           </Stack>
           <Footer />
@@ -86,9 +92,7 @@ const UserLayout: React.FC = () => {
         opened={(matchScreen && mobileLink) || false}
         onClose={() => setMobileLink(false)}
       >
-        <Stack
-
-        >
+        <Stack>
           {
             links.map((item, i) => <NavLinkMobile key={i} info={item} />)
           }

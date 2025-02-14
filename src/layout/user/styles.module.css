@@ -14,7 +14,6 @@
 
 .outlet {
   padding-top: 0px;
-  padding: 24px 10vw;
 }
 
 .nav_link {
@@ -63,10 +62,17 @@
 .footer_content {
   background-color: #ECEFF1;
   padding: 16px 5vw;
+  color: #0C5552 !important;
 }
 
 .footer_bottom {
   background-color: #BDBFC1;
   padding: 24px 0px;
   color: #000;
+}
+
+.footer_content_title {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold !important;
 }

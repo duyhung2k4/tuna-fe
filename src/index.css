@@ -20,12 +20,29 @@
   overflow: hidden;
 }
 
+html {
+  font-size: 100%; /* 16px mặc định */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 80%; /* Giảm xuống 14.4px */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 60%; /* Giảm xuống 12.8px */
+  }
+}
+
 body {
   height: 100vh !important;
   width: 100vw !important;
   padding: 0px !important;
   margin: 0px !important;
   overflow: hidden;
+  font-size: 1rem;
 }
 
 /* width */

@@ -4,6 +4,7 @@ import { Group, Stack, Text } from "@mantine/core";
 import { ObjectRouter, ROUTER } from "@/constants/router";
 import { useNavigate } from "react-router";
 import { IconChevronDown } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 import classes from "./styles.module.css";
 import textClasses from "@/styles/text.module.css";
@@ -40,7 +41,7 @@ export const NavLink: React.FC<NavLinkProps> = (props) => {
       className={`${classes.nav_link} ${isHref && classes.nav_link_active}`}
       onMouseEnter={() => setParentHover(true)}
       onMouseLeave={() => setParentHover(false)}
-      >
+    >
       <Group
         onClick={handleNavigation}
         justify="center"
@@ -51,7 +52,11 @@ export const NavLink: React.FC<NavLinkProps> = (props) => {
         {props.info.childs.length > 0 && <IconChevronDown size={18} />}
       </Group>
 
-      <Stack
+      <motion.div
+        animate={{
+          opacity: parentHover || childHover ? 1 : 0,
+        }}
+        transition={{ duration: 0.2 }}
         style={{
           display: parentHover || childHover ? "block" : "none",
           position: "absolute",
@@ -62,6 +67,7 @@ export const NavLink: React.FC<NavLinkProps> = (props) => {
         onMouseEnter={() => setChildHover(true)}
         onMouseLeave={() => setChildHover(false)}
       >
+
         <Stack
           gap={2}
           style={{
@@ -87,7 +93,7 @@ export const NavLink: React.FC<NavLinkProps> = (props) => {
             )
           }
         </Stack>
-      </Stack>
+      </motion.div>
     </Stack>
   )
 }

@@ -23,7 +23,7 @@ export const Carousel1: React.FC = () => {
     <>
       <Carousel
         withIndicators
-        height={600}
+        height={"50vw"}
         className={classes.carousel_1}
         loop
         slideSize="100%"
